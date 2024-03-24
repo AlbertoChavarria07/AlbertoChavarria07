@@ -3,89 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deadpool</title>
+    <title>Pacman</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .body,html{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .contenido {
+            position: relative;
+            height: 100vh; 
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        .contenido .texto-presentacion {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            margin-bottom: 20px; 
+        }
+        .contenido .pacman {
+            margin: 80px;
+            width: 100px;
+            left: 100px;
+            top: 50px;
+            transform: translate(-80%, -80%);
+            border-top: 100px solid #ff0;
+            border-left: 100px solid #ff0;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid #ff0;
+            border-radius: 50%;
+            position: relative;
+        }
+        .img{
+            position: absolute;
+            transform: translate(40%, -40%);
+            width: 250px;
+            height: 220px;
+            background: url('img/pacman.jpg') no-repeat center center/cover;
+            opacity: 50%;
+            left: 320px;
+            bottom: 100px;
+            top: 0px;
+
+        }
+
+        .bolitas {
+            position: absolute;
+            width: 15px;
+            height: 23px;
+            background-color: black;
+            border-radius: 50%;
+            top: 200%;
+            right: -200px;
+        }
+    </style>
 </head>
 <body>
-   <style>
-    .body,html{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .deadpool{
-        position: relative;
-        width: 400px;
-        height: 400px;
-        background: url('img/deadpool.jpg') no-repeat center center/cover;
-        opacity: 50%;
-        left: 100px;
-        top: 50px;
-    }
-    .texto-presentacion{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: red;
-        text-align: center;
-        text-shadow: 1px 1px 2px black;
-    }
-    .circulo{
-
-    }
-    .cuadrado{
-        height: 300px;
-        width: 300px;
-        background-color: red;
-    }
-    .ojos{
-        display: block;
-        width: 60px;
-        height: 110px;
-        background-color: black;
-        border-radius: 50% 50% 50% 50% / 60% 60% 60% 60%;
-        position: relative;
-    }
-    .triangulo{
-        width: 0;
-        height: 0;
-        border-left: 40px solid transparent;
-        border-right: 40px solid transparent;
-        border-bottom: 80px solid black;
-    }
-    .trianguloizquierda{
-        width: 150px;
-        height: 150px;
-        background-color: black;
-        border: 2px solid white;
-        -moz-border-radius:0 100px 100px 0;
-        -webkit-border-radius: 0 100px 100px 0;
-        border-radius: 0 100px 100px 0;
-    }
-    .elipse{
-        float: left;
-        width: 150px;
-        height: 150px;
-        margin: 20px;
-        shape-outside: ellipse(20% 50%);
-        clip-path: ellipse(20% 50%);
-        background-color: black;
-    }
-   </style> 
-   <div class="deadpool">
-    <div class="texto-presentacion">
-        <h1>Mi primer dibujo en CSS</h1>
-        <h2>Diseño por: Alberto Chavarria</h2>
-        <p>De la especialidad de programacion de 4 semestre de la escuela Cetis 131</p>
+    <div class="contenido">
+        <div class="texto-presentacion">
+            <h1>Mi primer dibujo en CSS</h1>
+            <h2>Diseño por: Alberto Chavarria</h2>
+            <p>De la especialidad de programación de 4º semestre de la escuela Cetis 131</p>
+        </div>
+        <div class="pacman">
+            <div class="img"></div>
+            <div class="bolitas"></div>
+            <div class="bolitas" style="top: 150%; right: -50px;"></div>
+            <div class="bolitas" style="top: 250%; right: -50px;"></div>
+            <div class="bolitas" style="top: 200%; right: -150px;"></div>
+            <div class="bolitas" style="top: 220%; right: -100px;"></div> 
+        </div>
     </div>
-   </div>
-   <div class="cuadrado" style="left: 150px; top: 70px; border-radius: 50%;"></div>
-   <div class="cuadrado" style="width: 100px; height: 100px; left: 200px; top: 250px; border-radius: 50%;"></div>
-   <div class="ojos" style="top: -340px; left: 250px;"></div>
-   <div class="ojos" style="top: -380 px; left: 270px;"></div>
-   <div class="cuadrado" style="height: 20px; width: 20px; left: 190px; top: 170px; border-radius: 50%; background-color: blanchedalmond; "></div>
-   <div class="cuadrado" style="height: 20px; width: 20px; left: 190px; top: 170px; border-radius: 50%; background-color: blanchedalmond; "></div>
-   <div class="elipse" style="transform: rotate(90deg);"></div>
 </body>
 </html>

@@ -146,12 +146,11 @@
         hiddenInput.name = key;
         hiddenInput.value = value;
         document.getElementById('confirmacion').appendChild(hiddenInput);
-
     }
 };
 function sumbitOrder(){
     const forElement = document.getElementById('confirmacion');
-    const formData = new formData (formElement);
+    const formData = new FormData (forElement);
     const queryParams = new URLSearchParams();
     for (let [key, value] of formData.entries()){
         queryParams.append(key,value);

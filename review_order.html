@@ -14,7 +14,7 @@
     <style>
         body{
             background-color: rgb(146, 0, 165);
-            font-family: 'Times New Roman', Times, serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
         h1{
             text-align: center;
@@ -137,11 +137,10 @@
         const params = new URLSearchParams(window.location.search);
         document.getElementById('confirmacion').appendChild(document.createElement('hr'));
         for(const [key,value] of params.entries()){
-        const infoDiv =document.createElement('div');
-        document
+        const infoDiv = document.createElement('div');
         infoDiv.textContent = `${key}: ${value}`; 
         document.getElementById('confirmacion').appendChild(infoDiv);
-        const hiddenImput = document.createElement('input');
+        const hiddenInput = document.createElement('input');
         hiddenInput.type = 'hidden';
         hiddenInput.name = key;
         hiddenInput.value = value;

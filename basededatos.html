@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pronostico Del Clima</title>
+    <link href="https://fonts.cdnfonts.com/css/baby-girly" rel="stylesheet">        
+    <link href="https://fonts.cdnfonts.com/css/freich" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bree-serif-2" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/endless-font-4" rel="stylesheet">
+                
+    <title>Pronostico Del Climita</title>
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'BABY GIRLY', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: rgb(56, 0, 146);
         }
         .contenedor{
             text-align: center;
             padding: 7px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.011);
             background-color: #fff;
         }
         h1{
+            font-family: 'Bree Serif', sans-serif;
             margin: 0;
             padding: 10px;
-            background-color: #06527e;
-            color: #fff;
+            background-color: #040078;
+            color: #fcfffc;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
@@ -35,16 +41,18 @@
             padding: auto;
         }
         .intCiudad{
+            font-family: 'Endless Font 3', sans-serif;
             padding: 10px;
             margin: 10px 0;
             width: 60%;
             border-radius: 10px;
             border: 1px solid #000000;
         }
-        .city-name{
+        .city-name{                                           
+            font-family: 'Bree Serif', sans-serif;
             font-size: 24px;
             font-weight: bold;
-            color: #69767e;
+            color: #870d0d;
         }
         .temp{
             font-size: 18px;
@@ -55,10 +63,11 @@
             height: 100px;
         }
         button{
+            font-family: 'Freich', sans-serif;
             padding: 7px;
             border: none;
             border-radius: 10px;
-            background-color: #333;
+            background-color: #000000;
             color: #fff;
             cursor: pointer;
         }
@@ -71,8 +80,8 @@
     <div class="contenedor">
         <h1>Climita</h1>
         <p class="description">Pon el nombre de una ciudad:</p>
-        <input class="intCiudad" type="text" id="cityInput" placeholder="Introduce el nombre aqui...">
-        <button onclick="getWeather()">Navegador</button>
+        <input class="intCiudad" type="text" id="cityInput" placeholder="Escribe el nombre aqui...">
+        <button onclick="getWeather()">Buscar</button>
         <div class="info-clima" id="w-icon"></div>
         <div class="info-clima" id="weatherInfo"></div>
     </div>
@@ -93,12 +102,11 @@
                     </h1>
                     <p>Humedad: <spam class="temp">${data.main.humidty}%</spam></p>
                 `;
-
             })
             .catch(error =>{
                 console.error("Error fetching weather data:", error);
                 const weatherInfo = document.getElementById("weatherInfo");
-                weatherInfo.innerHTML = `<p>Failed to fetch weather data. Please try again later.</p>`;
+                weatherInfo.innerHTML = `<p>Ciudad No Encontrada,FAVOR DE INGRESAR OTRA CIUDAD.</p>`;
             });
         }
     </script>
